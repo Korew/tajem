@@ -1,0 +1,27 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'components.scss';
+
+$container-width: 960px;
+$container-padding: 0 10px;
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after  {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	max-width: $container-width;
+	padding: $container-padding;
+	margin: 0 auto;
+}

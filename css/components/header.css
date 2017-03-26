@@ -1,0 +1,12 @@
+.header {
+  position: fixed; }
+
+.navbar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .navbar-nav {
+    list-style-type: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
