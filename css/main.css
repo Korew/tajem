@@ -1,32 +1,22 @@
-.section {
-  padding: 70px 0;
-  position: relative;
-  z-index: 1; }
-  .section-background {
-    background-size: cover;
-    background-position: 50% 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -100; }
-  .section-overlay {
-    background-size: cover;
-    background-color: inherit;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1; }
-  .section-fill-height {
-    min-height: 100vh; }
+.btn a {
+  display: inline-block;
+  padding: 15px 15px 13px;
+  color: #00e0d0;
+  font-family: "Hammersmith One";
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: 1px solid #00e0d0; }
+  .btn a:hover {
+    background-color: #00e0d0;
+    color: #fff; }
 
 .header {
   position: fixed;
   width: 100%;
-  padding: 15px 0; }
+  padding: 15px 0;
+  z-index: 100; }
 
 .navbar {
   display: -webkit-flex;
@@ -47,12 +37,13 @@
     .navbar-nav > li {
       margin-right: 20px; }
       .navbar-nav > li > a {
+        cursor: pointer;
         display: block;
         padding: 5px;
         text-decoration: none;
         color: #fff; }
-      .navbar-nav > li a.active {
-        color: #00e0d0; }
+        .navbar-nav > li > a.active, .navbar-nav > li > a:hover {
+          color: #00e0d0; }
     .navbar-nav > li:last-child {
       margin-right: 0; }
   .navbar-toggler {
@@ -72,6 +63,112 @@
     .navbar-collapse {
       display: none; } }
 
+.section {
+  padding: 70px 0;
+  position: relative;
+  z-index: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .section-background {
+    background-size: cover;
+    background-position: 50% 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100; }
+  .section-overlay:after {
+    content: '';
+    background: linear-gradient(to right, #09052f, #311d5e);
+    opacity: 0.85;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+  .section-fill-height {
+    min-height: 100vh; }
+  .section .container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .section-title {
+    color: #413d4b;
+    font-family: "Playfair Display";
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+#home .container {
+  margin-top: 200px; }
+
+#home .home-title {
+  color: #ffffff;
+  font-family: "Playfair Display";
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: capitalize;
+  text-align: center; }
+  #home .home-title:after {
+    content: '';
+    display: block;
+    margin: 20px auto 30px;
+    width: 50px;
+    height: 1px;
+    background-color: #00e0d0; }
+
+#home .home-text {
+  max-width: 690px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 50px; }
+
+#home .slide-selector {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c2c2c2;
+  border-radius: 50%;
+  cursor: pointer; }
+  #home .slide-selector.active, #home .slide-selector:hover {
+    border-color: #00e0d0;
+    background-color: #00e0d0; }
+
+#home .btn {
+  margin-bottom: 130px; }
+
+#story .container {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+#story .btn {
+  margin-bottom: 130px; }
+
 html {
   box-sizing: border-box; }
 
@@ -80,9 +177,16 @@ html {
 *:after {
   box-sizing: inherit; }
 
+h1, p {
+  margin: 0;
+  padding: 0; }
+
 img {
   max-width: 100%;
   height: auto; }
+
+a {
+  text-decoration: none; }
 
 .container {
   max-width: 960px;

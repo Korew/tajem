@@ -1,0 +1,8 @@
+#story .container {
+  margin-top: 200px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+#story .btn {
+  margin-bottom: 130px; }

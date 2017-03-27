@@ -5,6 +5,7 @@ $navbar-breakpoint: 768px;
 	position: fixed;
 	width: 100%;
 	padding: 15px 0;
+	z-index: 100;
 }
 
 .navbar {
@@ -21,14 +22,15 @@ $navbar-breakpoint: 768px;
 		> li {
 			margin-right: 20px;
 			> a {
+				cursor: pointer;
 				display: block;
 				padding: 5px;
 				text-decoration: none;
 				color: #fff;
-			}
 
-			a.active {
-				color: #00e0d0;
+				&.active, &:hover {
+					color: #00e0d0;
+				}
 			}
 		}
 		> li:last-child {
@@ -53,9 +55,9 @@ $navbar-breakpoint: 768px;
 		}
 	}
 
-		&-collapse {
-			@media all and (max-width: $navbar-breakpoint - 1)  {
-				display: none;
-			}
+	&-collapse {
+		@media all and (max-width: $navbar-breakpoint - 1)  {
+			display: none;
 		}
 	}
+}
